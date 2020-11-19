@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 Widget appBarHome() {
   return AppBar(
+    centerTitle: true,
     backgroundColor: Color(0xff333333),
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:app_keenambellas/screens/detailpage.dart';
 import 'package:flutter/material.dart';
 
 class ListSurya extends StatelessWidget {
@@ -45,7 +46,7 @@ class ListSurya extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff00366E),
+      backgroundColor: Color(0xffbcaaa4),
       body: ListView.builder(
           itemCount: namaPlanet.length,
           itemBuilder: (BuildContext context, int index) {
@@ -54,16 +55,16 @@ class ListSurya extends StatelessWidget {
             final isi = isiPlanet[index].toString();
             final gambar = imgPlanet[index].toString();
             return GestureDetector(
-              /*onTap: () {
+              onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => DetailPlanet(
+                        builder: (context) => DetailPlanetPage(
                             itemTitlePlanet: judul,
-                            itemDeksPlanet: deks,
-                            itemIsiPlanet: isi,
-                            itemGambarPlanet: gambar)));
-              },*/
+                                itemDeksPlanet: deks,
+                                itemIsiPlanet: isi,
+                                itemGambarPlanet: gambar)));
+              },
               child: Container(
                 margin: EdgeInsets.only(bottom: 10.0, top: 10.0),
                 width: MediaQuery.of(context).size.width,

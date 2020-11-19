@@ -1,3 +1,5 @@
+import 'package:app_keenambellas/detail/detailmatahari.dart';
+import 'package:app_keenambellas/detail/detailtatasurya.dart';
 import 'package:app_keenambellas/widget/appbarhome.dart';
 import 'package:app_keenambellas/widget/listplanet.dart';
 import 'package:app_keenambellas/widget/widgetcarousel.dart';
@@ -25,37 +27,49 @@ class _HomePageState extends State<HomePage> {
           Row(
             children: <Widget>[
               Expanded(
-                  child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  alignment: Alignment.center,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Text(
-                    'Tata Surya',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              )),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => DetailTataSurya()));
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 15),
+                        alignment: Alignment.center,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          'Tata Surya',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  )),
               Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => DetailMatahariPage()));
+                  },
                   child: Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Container(
-                  margin: EdgeInsets.only(top: 15),
-                  alignment: Alignment.center,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
+                    padding: EdgeInsets.all(10.0),
+                    child: Container(
+                      margin: EdgeInsets.only(top: 15),
+                      alignment: Alignment.center,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text('Matahari',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ),
                   ),
-                  child: Text('Sejarah Tata Surya',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-              ))
+                ),)
             ],
           ),
           Expanded(
@@ -81,6 +95,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          list
         ],
       ),
     );
